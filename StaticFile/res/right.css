@@ -1,0 +1,11 @@
+#rightbar{
+    background-color: rgb(48, 48, 48);
+    vertical-align: middle;
+    overflow-y: hidden;
+}
+
+.right-bar-container{
+    height: calc(100vh);
+    vertical-align: middle;
+    overflow-y: hidden;
+}
