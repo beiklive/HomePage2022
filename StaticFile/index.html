@@ -1,43 +1,53 @@
 <!doctype html>
 <html lang="zh-CN">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
-    <title>HomePage2022</title>
-    <link rel="stylesheet" href="./res/index.css">
-    <link rel="stylesheet" href="./res/right.css">
-    <link rel="stylesheet" href="./res/left.css">
-    <!-- Bootstrap -->
-    <link href="https://cdn.staticfile.org/twitter-bootstrap/5.1.1/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://cdn.staticfile.org/twitter-bootstrap/5.1.1/js/bootstrap.bundle.min.js"></script>
-  </head>
-  <body>
 
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-sm-5" id="leftbar">
-            <div class="left-bar-container">
-                <div id="light">
-                    <div class="light-top">
-                    </div>
-                    <div class="light-bottom">
-                    </div>
-                </div>
-                <div id="avatar">
-                    <img src="./res/img/me.png" alt="">
-                    <div class="rotate-itself"></div>
-                </div>
-            </div>
-            </div>
-        <div class="col-sm-7" id="rightbar">
-            <div class="right-bar-container">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+  <title>HomePage2022</title>
+  <link rel="stylesheet" href="./res/index.css">
+  <link rel="stylesheet" href="./res/right.css">
+  <link rel="stylesheet" href="./res/left.css">
+  <!-- Bootstrap -->
+  <link href="https://cdn.staticfile.org/twitter-bootstrap/5.1.1/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.staticfile.org/twitter-bootstrap/5.1.1/js/bootstrap.bundle.min.js"></script>
+</head>
 
+<body>
+
+  <div class="container-fluid">
+    <div id="board"></div>
+    <div class="row">
+      <div class="col-sm-6" id="leftbar">
+        <div class="left-bar-container">
+          <div id="light">
+            <div class="light-top">
             </div>
+            <div class="light-bottom">
+            </div>
+            
+          </div>
+          <div id="avatar">
+            <img src="./res/img/me.png" alt="">
+            <div class="rotate-itself"></div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6" id="rightbar">
+        <div class="right-bar-container">
+          <div class="box">
+            <div id="index-container">
+              <p>hello world</p>
+            </div>
+          </div>
+            
+        </div>
       </div>
     </div>
 
     <script src="./res/index.js"></script>
-    </body>
+</body>
+
 </html>

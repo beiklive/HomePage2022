@@ -1,10 +1,10 @@
 :root{
 
     --var-width-avatar: 200px;
-    --var-float-avatar: 25px;
+    --var-float-avatar: 35px;
     --var-height-avatar: var(--var-width-avatar);
     --var-positionX-avatar: calc(50% - var(--var-width-avatar) / 2);
-    --var-positionY-avatar: calc(55% - var(--var-height-avatar) / 2);
+    --var-positionY-avatar: calc(45% - var(--var-height-avatar) / 2);
 
     --var-width-light: 100%;
     --var-height-light: 600px;
@@ -12,18 +12,26 @@
     /* --var-positionY-light: calc(50% - var(--var-height-avatar) / 2); */
 }
 
-#leftbar{
-    background-color: rgb(2, 2, 2);
-    vertical-align: middle;
-    overflow-y: hidden;
-}
+
 
 .left-bar-container{
     height: calc(100vh);
     position: relative;
     vertical-align: middle;
-    overflow-y: hidden;
+    /* overflow-y: hidden; */
 }
+
+/* #board{
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.515);
+    width: 400%;
+    height: 50%;
+    bottom: -15%;
+    left: -50%;
+    z-index:;
+    box-shadow: 0 0 15px 5px rgba(255, 255, 255, 0.138); 
+
+} */
 
 #light{
     position: absolute;
@@ -31,7 +39,7 @@
     left: var(--var-positionX-light);
     width: var(--var-width-light);
     height: var(--var-height-light);
-    overflow: hidden;
+    /* overflow: hidden; */
     /* border-radius: 100%;
     background-color: #81818154;
     filter: drop-shadow(0px 0px 100px #c7c7c7); */
@@ -42,17 +50,29 @@
     background-color: #8a8a8a;
     width:310px;
     height: 100px;
-    left:var(100% - 155px);
+    left:calc(50% - 155px);
     top: 35%;            
     box-shadow: 0 0 20px 60px #8a8a8a;
     border-radius: 130%;
     /* left: calc(50% - 75px); */
     position: relative;
     -webkit-transform:perspective(1.0em)  rotateX(5deg);
-
+    animation: light-animation1 5s infinite;
     /* filter: drop-shadow(0px 0px 20px #c7c7c7);  */
 
 }
+@keyframes light-animation1{
+    0%{
+        -webkit-transform:perspective(1.0em)  rotateX(5deg);
+    }
+    50%{
+        -webkit-transform:perspective(0.9em)  rotateX(5deg);
+    }
+    100%{
+        -webkit-transform:perspective(1.0em)  rotateX(5deg);
+    }
+}
+
 
 .light-bottom{
     position: absolute;
@@ -63,13 +83,19 @@
     border-radius: 100%;
     background-color: rgba(0, 0, 0, 0.568);
     z-index: 10;
-    /* filter: drop-shadow(0px 0px 100px #c7c7c7); */
+    animation: light-animation2 1.5s infinite;
 }
-/* #light img{
-    width: var(--var-width-light);
-    height: var(--var-height-light);
-} */
-
+@keyframes light-animation2{
+    0%{
+        background-color: rgba(5, 5, 5, 0.568);
+    }
+    50%{
+        background-color: rgba(0, 0, 0, 0.568);
+    }
+    100%{
+        background-color: rgba(5, 5, 5, 0.568);
+    }
+}
 
 #avatar{
     width: var(--var-width-avatar);
@@ -81,9 +107,9 @@
     position: relative;
     left: var(--var-positionX-avatar);
     top: var(--var-positionY-avatar);
-    z-index: 1;
+    z-index: 11;
 
-    animation: avatar-animation 3s infinite;
+    animation: avatar-animation 1.5s infinite;
 }
 
 @keyframes avatar-animation{
@@ -91,7 +117,7 @@
         top: var(--var-positionY-avatar);
     }
     50%{
-        top: calc(var(--var-positionY-avatar) - var(--var-float-avatar));
+        top: calc(var(--var-positionY-avatar) + var(--var-float-avatar));
     }
     100%{
         top: var(--var-positionY-avatar);
@@ -125,5 +151,6 @@
     border-radius: 50%;
     position: relative;
     filter: drop-shadow(0px 0px 15px #c7c7c7);
+    z-index: 11;
 }
 
