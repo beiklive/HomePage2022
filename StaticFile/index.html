@@ -13,7 +13,8 @@
   <!-- Bootstrap -->
   <link href="https://cdn.staticfile.org/twitter-bootstrap/5.1.1/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-  <script src="https://cdn.staticfile.org/twitter-bootstrap/5.1.1/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.staticfile.org/twitter-bootstrap/5.1.1/js/bootstrap.min.js"></script>
+  <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
 </head>
 
 <body>
@@ -28,7 +29,7 @@
             </div>
             <div class="light-bottom">
             </div>
-            
+
           </div>
           <div id="avatar">
             <img src="./res/img/me.png" alt="">
@@ -42,20 +43,39 @@
             <div id="index-container">
               <div class="label-item">
                 <div class="list-group">
-                  <a  class="myitem" href="#"> <p><i class="fa fa-home fa-fw"></i>&nbsp;Home</p></a>
-                  <a  class="myitem" href="#"><p><i class="fa fa-book fa-fw"></i>&nbsp;Wiki</p></a>
-                  <a  class="myitem" href="#"><p><i class="fa fa-pencil fa-fw"></i>&nbsp;Applications</p></a>
-                  <a  class="myitem" href="#"><p><i class="fa fa-cog fa-fw"></i>&nbsp;Settings</p></a>
+                  <a class="myitem" href="http://www.beiklive.top">
+                    <p><i class="fa fa-home fa-fw"></i>&nbsp;Home</p>
+                  </a>
+                  <a class="myitem" href="http://wiki.beiklive.top">
+                    <p><i class="fa fa-book fa-fw"></i>&nbsp;Wiki</p>
+                  </a>
+                  <a class="myitem" href="http://chat.beiklive.top">
+                    <p><i class="fa fa-wechat fa-fw"></i>&nbsp;WebChat</p>
+                  </a>
+                  <a class="myitem" href="#" onclick="ShowSettings()">
+                    <p><i class="fa fa-cog fa-fw"></i>&nbsp;Settings</p>
+                  </a>
                 </div>
               </div>
             </div>
           </div>
-            
+
         </div>
       </div>
     </div>
 
-    <script src="./res/index.js"></script>
+<!-- 模态框（Modal） -->
+<div class="MySettingBox " id="MySettingBox" style=" visibility: hidden;">
+  <div class="input-group" >
+    <input id="KeyInput" type="text" class="form-control">
+    <span class="input-group-btn">
+        <button class="btn btn-primary" type="button" onclick="SendKey()">Go!</button>
+    </span>
+  </div>
+  
+</div>
+
+      <script src="./res/index.js"></script>
 </body>
 
 </html>

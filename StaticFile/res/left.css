@@ -1,10 +1,10 @@
 :root{
 
     --var-width-avatar: 200px;
-    --var-float-avatar: 35px;
+    --var-float-avatar: 55px;
     --var-height-avatar: var(--var-width-avatar);
     --var-positionX-avatar: calc(50% - var(--var-width-avatar) / 2);
-    --var-positionY-avatar: calc(45% - var(--var-height-avatar) / 2);
+    --var-positionY-avatar: calc(35% - var(--var-height-avatar) / 2);
 
     --var-width-light: 100%;
     --var-height-light: 600px;
